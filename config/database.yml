@@ -29,7 +29,7 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: hellorails
+  #username: RailsCapstone
 
   # The password associated with the postgres role (username).
   #password:
@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: RailsCapstone_production
   username: RailsCapstone
   password: <%= ENV["RAILSCAPSTONE_DATABASE_PASSWORD"] %>
