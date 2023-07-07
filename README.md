@@ -38,6 +38,9 @@ This project is created as part of the rails capstone at Microverse. This app is
   </ul>
 </details>
 
+### Project video Documentation <a name='video-documentation'></a>
+<a href="https://www.loom.com/share/9d49f746293c4dadb2e623e37c7b19dd">Video Link</a>
+
 ### Key Features <a name="key-features"></a>
 
 - **[User table]**
