@@ -1,0 +1,18 @@
+databases:
+  - name: Budgetapp
+    databaseName: budgetapp_i15o
+    user: budgetapp_i15o_user
+
+services:
+  - type: web
+    name: RoR-Capstone
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: budgetapp_i15o
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
